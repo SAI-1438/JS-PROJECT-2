@@ -52,8 +52,9 @@ function AddNewTask(){
 function showboxs(){
     var months = ['January','February','March','April','May','June','July','August','September','October','November','December'];       
     var tomorrow = new Date();
-    tomorrow.setTime(tomorrow.getTime() + (1000*3600*24));       
-    document.getElementById("Date").innerHTML = months[tomorrow.getMonth()] + " " + tomorrow.getDate()+ ", " + tomorrow.getFullYear();
+    tomorrow.setTime(tomorrow.getTime() + (1000*3600*24));
+    const date=document.getElementById("Date");
+    date.innerHTML = months[tomorrow.getMonth()] + " " + tomorrow.getDate()+ ", " + tomorrow.getFullYear();
 
     const mainbox1=document.getElementById('mainbox1');
     let child = "";
