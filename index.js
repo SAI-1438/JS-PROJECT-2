@@ -50,17 +50,11 @@ function AddNewTask(){
 }
 
 function showboxs(){
-    var months = ['January','February','March','April','May','June','July','August','September','October','November','December'];       
-    var tomorrow = new Date();
-    tomorrow.setTime(tomorrow.getTime() + (1000*3600*24));
-    const date=document.getElementById("Date");
-    date.innerHTML = months[tomorrow.getMonth()] + " " + tomorrow.getDate()+ ", " + tomorrow.getFullYear();
-
     const mainbox1=document.getElementById('mainbox1');
     let child = "";
     for(let i=0; i < data.length; i++){
         child += `<div id="box_${data[i].id}" class="boxs">
-        <h3 value="${data[i].boxHead}" onclick="showbox(${data[i].id}, this.getAttribute('value'))">${data[i].boxHead}</h3><p id="Date"></p>
+        <h3 value="${data[i].boxHead}" onclick="showbox(${data[i].id}, this.getAttribute('value'))">${data[i].boxHead}</h3><input type="date"/>
         <hr>
         <ul id="items_list_${(data[i].id)}">
         </ul>
