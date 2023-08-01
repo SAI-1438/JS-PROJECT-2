@@ -59,7 +59,7 @@ function showboxs(){
     let child = "";
     for(let i=0; i < data.length; i++){
         child += `<div id="box_${data[i].id}" class="boxs">
-        <h3 value="${data[i].boxHead}" onclick="showbox(${data[i].id}, this.getAttribute('value'))">${data[i].boxHead}</h3><span id="Date"></span>
+        <h3 value="${data[i].boxHead}" onclick="showbox(${data[i].id}, this.getAttribute('value'))">${data[i].boxHead}</h3><p id="Date"></p>
         <hr>
         <ul id="items_list_${(data[i].id)}">
         </ul>
